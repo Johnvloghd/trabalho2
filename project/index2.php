@@ -17,15 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['ac
     if (empty($nome)) {
         $mensagem_erro = 'O campo Nome é obrigatório!';
     } else {
-        // POR QUE PREPARED STATEMENT NO INSERT?
-        // O Prepared Statement separa a ESTRUTURA da query
-        // dos DADOS que serão inseridos. Funciona assim:
-        // 1. Você envia a query com marcadores de posição (?)
-        //    → "INSERT INTO contatos (nome, descricao) VALUES (?, ?)"
-        // 2. O MySQL compila a ESTRUTURA da query primeiro
-        // 3. Depois, você envia os dados separadamente via bind_param()
-        // 4. O MySQL SUBSTITUI os ? pelos dados, MAS NUNCA os interpreta
-        //    como código SQL — eles são tratados como texto puro
         $sql_insert = "INSERT INTO contatos (nome, descricao) VALUES (?, ?)";
 
         // prepare() → cria o statement (objeto mysqli_stmt)
