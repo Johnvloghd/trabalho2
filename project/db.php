@@ -22,18 +22,11 @@
  *   objeto de conexão quebrado.
  */
 
-// ==========================================
-// CONFIGURAÇÃO — Altere conforme seu ambiente
-// ==========================================
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');          // Usuário do MySQL (XAMPP padrão: root)
 define('DB_PASS', '');              // Senha do MySQL (XAMPP padrão: vazio)
 define('DB_NAME', 'gerenciador_contatos');
 define('DB_CHARSET', 'utf8mb4');
-
-// ==========================================
-// CONEXÃO ORIENTADA A OBJETOS
-// ==========================================
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 // OBRIGATÓRIO: Verificar se a conexão falhou
