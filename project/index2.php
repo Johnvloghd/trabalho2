@@ -58,10 +58,6 @@ $termo_busca = isset($_GET['busca']) ? trim($_GET['busca']) : '';
 //   $stmt->bind_param('s', $termo_com_curinga);
 //
 // ISSO TAMBÉM FUNCIONA E É IGUALMENTE SEGURO!
-//
-// Aqui demonstramos escape_string() porque o professor
-// pediu ESPECIFICAMENTE que você saiba usar AMBAS as técnicas.
-//
 
 $termo_escapado = $mysqli->real_escape_string($termo_busca);
 
