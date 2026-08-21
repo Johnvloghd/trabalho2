@@ -43,11 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['ac
 }
 
 $termo_busca = isset($_GET['busca']) ? trim($_GET['busca']) : '';
-
-// ==========================================
-// BLINDAGEM #2: escape_string() NO LIKE
-// ==========================================
-// 
 // POR QUE escape_string() NO FILTRO E NÃO PREPARED STATE?
 // 
 // Você PODE usar prepared statements com LIKE, mas precisa
