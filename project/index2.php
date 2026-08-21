@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['ac
     $descricao = isset($_POST['descricao']) ? trim($_POST['descricao']) : '';
 
     // Validação básica: nome é obrigatório
+    // Blindagem contra SQL Injection no
     if (empty($nome)) {
         $mensagem_erro = 'O campo Nome é obrigatório!';
     } else {
