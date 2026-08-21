@@ -71,12 +71,7 @@ if (!empty($termo_busca)) {
                   FROM contatos 
                   ORDER BY data_cadastro DESC";
 }
-
-// ==========================================
-// 5. EXECUTAR A CONSULTA E PERCORRER RESULTADOS
-// ==========================================
 // COMO FUNCIONA:
-// 
 // query() → executa a query e retorna um objeto mysqli_result
 // fetch_assoc() → retorna UMA linha como array associativo
 //   ['id' => 1, 'nome' => 'Maria', 'descricao' => '...', ...]
